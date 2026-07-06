@@ -1,0 +1,879 @@
+cat > /mnt/user-data/outputs/pathoma_detailed_notes.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathoma — Detailed Course Notes</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: #f4f0ea; color: #1a1a1a; font-size: 15px; line-height: 1.6; }
+
+header {
+  background: #7b1c1c;
+  color: white;
+  padding: 22px 20px 14px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+header h1 { font-size: 1.3rem; margin-bottom: 3px; }
+header p { font-size: 0.78rem; opacity: 0.85; }
+
+nav {
+  background: #2c2c2c;
+  padding: 10px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav a {
+  color: #f0d9b5;
+  text-decoration: none;
+  font-size: 0.75rem;
+  margin-right: 14px;
+  display: inline-block;
+}
+nav a:hover { color: white; }
+
+.part-header {
+  background: #1a1a1a;
+  color: #f0d9b5;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 24px;
+}
+
+.unit-block {
+  background: white;
+  margin: 0 0 4px 0;
+  border-left: 5px solid #7b1c1c;
+}
+.unit-header {
+  background: #7b1c1c;
+  color: white;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.unit-header:after { content: '▼'; font-size: 0.7rem; opacity: 0.8; }
+
+.topic-section {
+  border-bottom: 1px solid #ede6dc;
+  padding: 16px 18px;
+}
+.topic-section:last-child { border-bottom: none; }
+
+.topic-title {
+  font-weight: bold;
+  color: #7b1c1c;
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.page-ref {
+  background: #7b1c1c;
+  color: white;
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-weight: normal;
+  flex-shrink: 0;
+}
+
+.note-body { font-size: 0.86rem; color: #2a2a2a; }
+.note-body p { margin-bottom: 6px; }
+.note-body ul { padding-left: 18px; margin-bottom: 6px; }
+.note-body li { margin-bottom: 3px; }
+.note-body .sub { padding-left: 14px; list-style: circle; }
+.note-body strong { color: #7b1c1c; }
+
+.key-box {
+  background: #fff8e8;
+  border: 1px solid #f0c040;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #5a4000;
+}
+.key-box b { color: #7b1c1c; }
+
+.gap-note {
+  background: #fff3cd;
+  border-left: 3px solid #d4a017;
+  padding: 6px 10px;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #7a5c00;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  font-size: 0.76rem;
+  color: #888;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Pathoma — Detailed Pathophysiology Notes</h1>
+  <p>Extracted from Fundamentals of Pathology · Husain A. Sattar, MD · 2021 Edition</p>
+</header>
+
+<nav>
+  <a href="#u1">Unit 1: Cell</a>
+  <a href="#u2">Unit 2: Defense</a>
+  <a href="#u3">Unit 3: Fluids</a>
+  <a href="#u4">Unit 4: Neoplasia</a>
+  <a href="#u5">Unit 5: Heme</a>
+  <a href="#u6">Unit 6: Cardiac</a>
+  <a href="#u7">Unit 7: Resp</a>
+  <a href="#u8">Unit 8: Renal</a>
+  <a href="#u9">Unit 9: GI/Liver</a>
+  <a href="#u10">Unit 10: Endocrine</a>
+  <a href="#u11">Unit 11: Neuro</a>
+  <a href="#u12">Unit 12: MSK/Skin</a>
+</nav>
+
+<!-- ===================== PART I ===================== -->
+<div class="part-header">PART I — GENERAL PATHOLOGY</div>
+
+<!-- UNIT 1 -->
+<div class="unit-block" id="u1">
+  <div class="unit-header">Unit 1 · Cellular Function, Adaptation, Injury & Death (Ch. 1, pp. 1–10)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Homeostasis & Cellular Adaptation <span class="page-ref">Ch.1 p.1</span></div>
+    <div class="note-body">
+      <p>An organ is in <strong>homeostasis</strong> with the physiologic stress placed on it. A change in stress triggers growth adaptations.</p>
+      <ul>
+        <li><strong>Hypertrophy</strong> — increase in cell SIZE (gene activation, protein synthesis). Permanent tissues (cardiac muscle, skeletal muscle, neurons) can only hypertrophy, NOT hyperplasia.</li>
+        <li><strong>Hyperplasia</strong> — increase in cell NUMBER via stem cells. Pathologic hyperplasia (e.g., endometrial) can progress to dysplasia → cancer. Exception: BPH does NOT increase prostate cancer risk.</li>
+        <li><strong>Atrophy</strong> — decrease in cell size and number due to decreased stress (disuse, decreased hormones, decreased blood supply). Mechanisms: ubiquitin-proteosome degradation + autophagy.</li>
+        <li><strong>Metaplasia</strong> — change of one cell type to another via stem cell reprogramming. Classic example: Barrett esophagus (squamous → columnar from acid reflux). Reversible if stressor removed; can progress to dysplasia → adenocarcinoma.</li>
+        <li><strong>Dysplasia</strong> — disordered, precancerous cellular growth. Reversible if stress removed; progresses to carcinoma if it persists.</li>
+        <li><strong>Aplasia/Hypoplasia</strong> — failure/decrease of cell production during embryogenesis.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Cellular Injury — Hypoxia & Mechanisms <span class="page-ref">Ch.1 p.3</span></div>
+    <div class="note-body">
+      <p>Injury occurs when stress exceeds the cell's ability to adapt. Most important cause: <strong>Hypoxia</strong> (↓ O₂ delivery).</p>
+      <ul>
+        <li>O₂ is the final electron acceptor in oxidative phosphorylation; ↓ O₂ → ↓ ATP → cell injury.</li>
+        <li><strong>Ischemia</strong> = ↓ blood flow (atherosclerosis, venous obstruction, shock)</li>
+        <li><strong>Hypoxemia</strong> = ↓ PaO₂ (high altitude, hypoventilation, V/Q mismatch, diffusion defect)</li>
+        <li><strong>↓ O₂-carrying capacity</strong>: anemia, CO poisoning (cherry-red skin), methemoglobinemia (chocolate-colored blood → treat with methylene blue)</li>
+        <li><strong>Reversible injury hallmark</strong>: cellular swelling (↓ Na⁺-K⁺ pump → Na/H₂O enters; RER swells → ↓ protein synthesis)</li>
+        <li><strong>Irreversible injury hallmark</strong>: membrane damage → cytosolic enzymes (troponin) leak into serum; Ca²⁺ floods cell; lysosomal enzymes activated</li>
+      </ul>
+      <div class="key-box"><b>NURSING TIP:</b> Serum troponin elevation = irreversible myocyte injury (MI marker). CK-MB useful for detecting reinfarction.</div>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Free Radical Injury <span class="page-ref">Ch.1 p.7</span></div>
+    <div class="note-body">
+      <ul>
+        <li>Free radicals (unpaired electron) damage lipids, DNA, proteins → aging and oncogenesis</li>
+        <li><strong>Sources</strong>: ionizing radiation, inflammation (NADPH oxidase), metals (Fe²⁺ — Fenton reaction), drugs (P450 system, e.g., acetaminophen)</li>
+        <li><strong>Eliminated by</strong>: antioxidants (vitamins A, C, E; glutathione), superoxide dismutase, catalase, transferrin</li>
+        <li><strong>Reperfusion injury</strong>: O₂-derived free radicals generated when blood returns to ischemic tissue → continued rise in troponin after MI reperfusion</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Cell Death — Necrosis vs. Apoptosis <span class="page-ref">Ch.1 p.5</span></div>
+    <div class="note-body">
+      <p><strong>Necrosis</strong> — death of large groups of cells; always pathologic; followed by acute inflammation.</p>
+      <ul>
+        <li><strong>Coagulative</strong> — firm; cell shape preserved but nucleus gone. Characteristic of ischemic infarction of ALL organs EXCEPT the brain. Wedge-shaped, pale.</li>
+        <li><strong>Liquefactive</strong> — tissue becomes liquid (enzymatic lysis). Seen in brain infarction (microglial enzymes), abscess (neutrophil enzymes), pancreatitis.</li>
+        <li><strong>Caseous</strong> — "cottage cheese" appearance; combo of coagulative + liquefactive. Characteristic of TB and fungal granulomas.</li>
+        <li><strong>Fat necrosis</strong> — chalky-white adipose; saponification (fatty acids + Ca²⁺). Seen in pancreatitis and breast trauma.</li>
+        <li><strong>Fibrinoid</strong> — vessel wall damage with fibrin leakage → bright pink wall. Seen in malignant hypertension and vasculitis.</li>
+        <li><strong>Gangrenous</strong> — coagulative necrosis of lower limb/GI. Wet gangrene = superimposed infection (liquefactive).</li>
+      </ul>
+      <p><strong>Apoptosis</strong> — programmed, ATP-dependent, single-cell death. No inflammation. Mediated by caspases via intrinsic (mitochondrial), extrinsic (FAS/TNF receptor), or CD8⁺ T-cell pathways. Cell shrinks, nucleus fragments, phagocytosed by macrophages.</p>
+      <div class="key-box"><b>KEY DISTINCTION:</b> Necrosis = always pathologic, causes inflammation. Apoptosis = can be physiologic (endometrial shedding, embryogenesis), no inflammation.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit-block" id="u2">
+  <div class="unit-header">Unit 2 · Defense Mechanisms — Inflammation, Immunity & Wound Healing (Ch. 2, pp. 11–22)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Acute Inflammation — Mediators & Steps <span class="page-ref">Ch.2 p.11</span></div>
+    <div class="note-body">
+      <p>Characterized by <strong>edema and neutrophils</strong>. Innate immunity — immediate, nonspecific. Arises with infection or tissue necrosis.</p>
+      <p><strong>Key chemical mediators:</strong></p>
+      <ul>
+        <li><strong>Histamine</strong> (mast cells) → vasodilation, ↑ vascular permeability. Released by tissue trauma, C3a/C5a, or IgE cross-linking</li>
+        <li><strong>Prostaglandins</strong> (via cyclooxygenase): PGE₂ → pain, fever, vasodilation. PGI₂ → vasodilation. (NSAIDs block COX)</li>
+        <li><strong>Leukotrienes</strong> (via 5-lipoxygenase): LTB₄ → attracts neutrophils; LTC₄/D₄/E₄ → bronchoconstriction, vasodilation (slow-reacting substances of anaphylaxis)</li>
+        <li><strong>Complement</strong>: C3a/C5a (anaphylatoxins, mast cell degranulation), C5a (neutrophil chemotaxis), C3b (opsonin), MAC (C5b-9) lyses microbes</li>
+        <li><strong>Bradykinin</strong> (kinin system): vasodilation, ↑ permeability, pain</li>
+      </ul>
+      <p><strong>Neutrophil Steps</strong>: Margination → Rolling (selectins bind sialyl Lewis X) → Adhesion (ICAM/VCAM + integrins) → Transmigration → Chemotaxis → Phagocytosis → O₂-dependent killing (NADPH oxidase → O₂⁻ → H₂O₂ → HOCl via MPO)</p>
+      <div class="key-box"><b>CARDINAL SIGNS:</b> Redness (rubor), Warmth (calor) — vasodilation; Swelling (tumor) — exudate; Pain (dolor) — bradykinin + PGE₂; Fever — IL-1/TNF → ↑ cyclooxygenase → ↑ PGE₂.</div>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Chronic Inflammation — T cells, B cells, Granulomas <span class="page-ref">Ch.2 p.14</span></div>
+    <div class="note-body">
+      <p>Characterized by <strong>lymphocytes and plasma cells</strong>. Adaptive immunity — delayed but more specific.</p>
+      <ul>
+        <li><strong>CD4⁺ Helper T cells</strong>: TH1 → IFN-γ (activates macrophages, promotes IgG) | TH2 → IL-4 (IgE switching), IL-5 (eosinophils/IgA)</li>
+        <li><strong>CD8⁺ Cytotoxic T cells</strong>: Kill via perforin/granzyme or FasL; require IL-2 from TH1</li>
+        <li><strong>B cells</strong>: Produce antibodies (IgM → class switching to IgG, IgA, IgE)</li>
+        <li><strong>Granulomatous inflammation</strong>: Collection of epithelioid histiocytes (activated macrophages) ± giant cells ± lymphocytes.
+          <ul class="sub">
+            <li>Noncaseating: sarcoidosis, foreign material, beryllium, Crohn, cat-scratch fever</li>
+            <li>Caseating: TB, fungal infections (central necrosis)</li>
+          </ul>
+        </li>
+        <li>Macrophages process antigen → present on MHC II to CD4⁺ → secrete IL-12 → TH1 → IFN-γ → macrophage converts to epithelioid histiocyte</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Tissue Repair & Wound Healing <span class="page-ref">Ch.2 p.20</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Labile tissues</strong>: continuously cycling stem cells (GI mucosa, skin, bone marrow) — best regeneration</li>
+        <li><strong>Stable tissues</strong>: quiescent (G0) but can re-enter cycle (liver, kidneys, pancreas)</li>
+        <li><strong>Permanent tissues</strong>: no regeneration (cardiac muscle, skeletal muscle, neurons) → only fibrous repair</li>
+        <li><strong>Granulation tissue</strong>: fibroblasts (deposit type III collagen) + capillaries + myofibroblasts (contract wound)</li>
+        <li><strong>Scar</strong>: type III collagen → replaced by type I (high tensile strength) via collagenase (requires zinc)</li>
+        <li><strong>Primary intention</strong>: wound edges approximated (sutured) → minimal scar</li>
+        <li><strong>Secondary intention</strong>: edges not approximated → granulation tissue fills defect</li>
+        <li><strong>Delayed healing</strong>: infection (most common, S. aureus), Vit C deficiency (↓ collagen hydroxylation), copper deficiency (↓ lysyl oxidase), zinc deficiency (↓ collagenase), ischemia, diabetes</li>
+        <li><strong>Keloid</strong>: excess type III collagen beyond wound margins; genetic predisposition (more common in African Americans)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Hypersensitivity Reactions (Types I–IV) <span class="page-ref">Ch.2 p.11</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Type I (IgE-mediated)</strong>: Anaphylaxis, asthma, allergic rhinitis. IgE on mast cells → antigen cross-linking → histamine + leukotrienes release</li>
+        <li><strong>Type II (antibody-mediated)</strong>: IgG/IgM against cell-surface antigens. e.g., Graves disease, Myasthenia gravis, ITP, Goodpasture syndrome</li>
+        <li><strong>Type III (immune complex)</strong>: Antigen-antibody complexes deposit in tissues. e.g., SLE, post-strep GN, serum sickness. Complement activated → C5a attracts neutrophils → tissue damage</li>
+        <li><strong>Type IV (cell-mediated)</strong>: T-cell-mediated; no antibody. e.g., TB (PPD test), contact dermatitis, Sjögren syndrome, transplant rejection</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Autoimmune Diseases — SLE & Rheumatoid Arthritis <span class="page-ref">Ch.2 p.17</span></div>
+    <div class="note-body">
+      <p><strong>Systemic Lupus Erythematosus (SLE)</strong> — type III HSR; chronic, systemic. Classically: middle-aged African American/Hispanic females.</p>
+      <ul>
+        <li>ANA (sensitive, not specific); anti-dsDNA and anti-Sm (highly specific)</li>
+        <li>Features: malar "butterfly" rash, photosensitivity, arthritis, serositis (pleuritis/pericarditis), renal damage (diffuse proliferative GN = most severe), Libman-Sacks endocarditis, hematologic abnormalities, psychosis/seizures</li>
+        <li>Antiphospholipid syndrome: hypercoagulable state → DVT, recurrent pregnancy loss, stroke</li>
+        <li>Drug-induced lupus: anti-histone antibodies (procainamide, hydralazine, isoniazid)</li>
+      </ul>
+      <p><strong>Rheumatoid Arthritis</strong> — chronic, systemic autoimmune disease. Associated with HLA-DR4. Affects women of late childbearing age.</p>
+      <ul>
+        <li>Pannus formation (inflamed granulation tissue) → cartilage destruction → ankylosis</li>
+        <li>Symmetric involvement of PIP joints, wrists (radial deviation); DIP usually spared</li>
+        <li>Morning stiffness that IMPROVES with activity (vs. OA which worsens during day)</li>
+        <li>Extra-articular: rheumatoid nodules, vasculitis, Baker cyst, pleural effusions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Immunodeficiency — HIV/AIDS & Primary Deficiencies <span class="page-ref">Ch.2 p.16</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>DiGeorge syndrome</strong>: 22q11 deletion → absent thymus → T-cell deficiency + hypocalcemia (absent parathyroids)</li>
+        <li><strong>SCID</strong>: Defective B AND T cells. Causes: cytokine receptor defects, ADA deficiency. Treatment: stem cell transplant</li>
+        <li><strong>X-linked agammaglobulinemia (Bruton)</strong>: No immunoglobulin (mutated Bruton tyrosine kinase). Presents after 6 months; recurrent bacterial/enterovirus infections</li>
+        <li><strong>IgA deficiency</strong>: Most common immunoglobulin deficiency; recurrent mucosal infections</li>
+        <li><strong>C5–C9 deficiency</strong>: Increased susceptibility to Neisseria infections</li>
+        <li><strong>C1 inhibitor deficiency</strong>: Hereditary angioedema</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit-block" id="u3">
+  <div class="unit-header">Unit 3 · Fluid, Electrolyte & Acid-Base Dynamics</div>
+  <div class="topic-section">
+    <div class="topic-title">Fluid Compartments, Edema & Third-Spacing <span class="page-ref">Ch.7 p.65 + Ch.12 p.125</span></div>
+    <div class="note-body">
+      <p>Pathoma integrates fluid balance contextually within vascular and renal pathology. Key concepts:</p>
+      <ul>
+        <li><strong>Edema</strong> results from ↑ hydrostatic pressure (right heart failure, portal HTN), ↓ oncotic pressure (nephrotic syndrome, cirrhosis, malnutrition), ↑ vascular permeability (inflammation), or lymphatic obstruction</li>
+        <li><strong>Pitting edema</strong>: dependent edema from right-sided heart failure (↑ hydrostatic pressure)</li>
+        <li><strong>Pulmonary edema</strong>: left-sided heart failure → ↑ capillary pressure → fluid in alveoli → hemosiderin-laden "heart failure cells"</li>
+        <li><strong>Ascites</strong>: portal hypertension (cirrhosis) → fluid in peritoneal cavity</li>
+        <li><strong>Exudate</strong>: protein-rich fluid from inflammation (↑ permeability). <strong>Transudate</strong>: protein-poor from hydrostatic/oncotic imbalance</li>
+      </ul>
+      <div class="gap-note">⚠ Acid-Base & Electrolyte imbalances are not a standalone Pathoma chapter. Supplement with course lecture notes and ATI. Contextual coverage: hyponatremia/hypernatremia in SIADH/DI (Ch.15); renal tubular acidosis and uremia in Ch.12; hypercalcemia in hyperparathyroidism (Ch.15).</div>
+    </div>
+  </div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit-block" id="u4">
+  <div class="unit-header">Unit 4 · Neoplasia (Cancer) (Ch. 3, pp. 23–30)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Tumor Biology — Benign vs. Malignant <span class="page-ref">Ch.3 p.23</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Benign</strong>: remain localized, do NOT metastasize; well-differentiated; organized growth; low N:C ratio; minimal mitosis</li>
+        <li><strong>Malignant (cancer)</strong>: invade locally AND have metastatic potential; poorly differentiated (anaplastic); nuclear pleomorphism; high N:C ratio; atypical mitoses; infiltrative</li>
+        <li><strong>Nomenclature</strong>: Epithelial benign = adenoma/papilloma; malignant = adenocarcinoma/carcinoma. Mesenchymal benign = -oma (lipoma); malignant = -sarcoma (liposarcoma). Lymphocyte malignant = lymphoma/leukemia</li>
+        <li><strong>Grading</strong>: microscopic differentiation (low grade = well differentiated; high grade = poorly differentiated)</li>
+        <li><strong>Staging</strong>: TNM — T (tumor size/invasion), N (lymph nodes), M (metastasis). Most important prognostic factor is M (metastasis).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Carcinogenesis — Oncogenes & Tumor Suppressors <span class="page-ref">Ch.3 p.24</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Proto-oncogenes</strong> → mutate to oncogenes → unregulated growth (gain of function). One hit sufficient.</li>
+        <li>Key oncogenes: RAS (carcinomas, melanoma) — mutated RAS stays active; ERBB2/HER2 (breast cancer); c-MYC with t(8;14) → Burkitt lymphoma; BCR-ABL with t(9;22) → CML; N-MYC amplification → neuroblastoma</li>
+        <li><strong>Tumor suppressor genes</strong>: both copies must be knocked out (Knudson two-hit hypothesis). Loss of function.</li>
+        <li><strong>p53</strong>: regulates G1→S transition; induces apoptosis if DNA damage irreparable. Lost in >50% of cancers. Germline loss = Li-Fraumeni syndrome.</li>
+        <li><strong>Rb</strong>: holds E2F (needed for S phase) until phosphorylated by cyclinD/CDK4. Germline loss = bilateral retinoblastoma + osteosarcoma.</li>
+        <li><strong>BCL2 overexpression</strong>: t(14;18) in follicular lymphoma → ↑ BCL2 → blocks apoptosis → B-cell accumulation</li>
+        <li><strong>Carcinogens</strong>: cigarette smoke (most common worldwide), aflatoxins (HCC), asbestos (mesothelioma + lung), arsenic, EBV, HPV 16/18, HBV/HCV, ionizing radiation (AML, papillary thyroid carcinoma), UVB (BCC, SCC, melanoma)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Metastasis — Mechanisms & Systemic Effects <span class="page-ref">Ch.3 p.28</span></div>
+    <div class="note-body">
+      <ul>
+        <li>Metastasis = hallmark of malignancy. Benign tumors NEVER metastasize.</li>
+        <li>Steps: ↓ E-cadherin → dissociation; collagenase destroys basement membrane; fibronectin attachment; vascular/lymphatic invasion</li>
+        <li><strong>Lymphatic spread</strong>: characteristic of carcinomas → regional lymph nodes first</li>
+        <li><strong>Hematogenous</strong>: characteristic of sarcomas; also renal cell carcinoma (renal vein), HCC (hepatic vein), follicular thyroid carcinoma, choriocarcinoma</li>
+        <li><strong>Seeding</strong>: ovarian carcinoma → peritoneum ("omental caking")</li>
+        <li><strong>Systemic effects (paraneoplastic)</strong>: cachexia, hormone secretion (SIADH from small cell lung CA), hypercalcemia (PTHrP from squamous cell lung CA)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== PART II ===================== -->
+<div class="part-header">PART II — SYSTEMIC PATHOLOGY</div>
+
+<!-- UNIT 5 -->
+<div class="unit-block" id="u5">
+  <div class="unit-header">Unit 5 · Hematological System (Ch. 4 pp. 31–40, Ch. 5 pp. 41–52, Ch. 6 pp. 53–64)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Anemias — Iron Deficiency, Pernicious, Sickle Cell <span class="page-ref">Ch.5 p.41</span></div>
+    <div class="note-body">
+      <p><strong>Anemia</strong> = ↓ RBC mass. Symptoms: weakness, fatigue, dyspnea, pale conjunctiva, angina. Classified by MCV (micro/normo/macrocytic).</p>
+      <p><strong>Iron Deficiency Anemia</strong> — most common worldwide. Microcytic, hypochromic RBCs, ↑RDW.</p>
+      <ul>
+        <li>↓ ferritin, ↑ TIBC, ↓ serum iron, ↓ % saturation, ↑ FEP</li>
+        <li>Causes: dietary lack, blood loss (PUD in males, menorrhagia in females, colon cancer in elderly)</li>
+        <li>Clinical: koilonychia (spoon nails), pica, Plummer-Vinson syndrome (+ esophageal web + atrophic glossitis)</li>
+        <li>Treatment: ferrous sulfate</li>
+      </ul>
+      <p><strong>Anemia of Chronic Disease</strong> — most common in hospitalized patients. ↑ ferritin (↑ hepcidin sequesters iron), ↓ TIBC, ↓ serum iron. Treat underlying cause.</p>
+      <p><strong>Sickle Cell Disease</strong> — autosomal recessive; HbS (glutamate → valine substitution on β chain). HbS polymerizes when deoxygenated → sickled RBCs → vaso-occlusion + hemolysis.</p>
+      <ul>
+        <li>Vaso-occlusive pain crises, dactylitis, acute chest syndrome, stroke, splenic sequestration, autosplenectomy (↑ risk for encapsulated bacteria — Strep pneumo, H. flu)</li>
+        <li>Osteomyelitis: Salmonella (not Staph) most associated</li>
+        <li>Labs: normocytic/normochromic anemia, sickled cells on smear, Howell-Jolly bodies</li>
+        <li>Hydroxyurea ↑ HbF production → fewer crises</li>
+      </ul>
+      <p><strong>Pernicious Anemia</strong> — autoimmune destruction of parietal cells → ↓ intrinsic factor → ↓ B12 absorption. Macrocytic, megaloblastic anemia. Subacute combined degeneration of spinal cord (dorsal column + lateral corticospinal tract). Treat: IM B12.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">White Blood Cell Disorders — Leukemias & Lymphomas <span class="page-ref">Ch.6 p.53</span></div>
+    <div class="note-body">
+      <p><strong>ALL</strong> (Acute Lymphoblastic Leukemia): most common childhood cancer. TdT positive; often involves CNS and testes. t(12;21) = best prognosis. t(9;22) = worst.</p>
+      <p><strong>AML</strong>: most common acute leukemia in adults. Auer rods characteristic. AML-M3 (promyelocytic) → t(15;17); treat with ATRA. Complication: DIC.</p>
+      <p><strong>CLL</strong>: most common leukemia in adults overall. Mature-appearing small lymphocytes; smudge cells on smear. Indolent; autoimmune hemolytic anemia common.</p>
+      <p><strong>CML</strong>: t(9;22) — Philadelphia chromosome; BCR-ABL tyrosine kinase. Treat: imatinib. Basophilia prominent. May transform to blast crisis.</p>
+      <p><strong>Hodgkin Lymphoma</strong>: Reed-Sternberg cells (large B cells, "owl-eyed" nuclei; CD15+/CD30+). Most common: nodular sclerosis (young women, mediastinal mass). B symptoms: fever, night sweats, weight loss. Contiguous lymph node spread.</p>
+      <p><strong>Non-Hodgkin Lymphoma</strong>: noncontiguous spread. Most common: diffuse large B-cell lymphoma (aggressive). Follicular lymphoma: t(14;18) → BCL2 overexpression; indolent but incurable. Burkitt: t(8;14) c-MYC; "starry-sky" pattern; EBV-associated.</p>
+      <p><strong>Multiple Myeloma</strong>: plasma cell malignancy. CRAB: Calcium ↑, Renal failure, Anemia (rouleaux), Bone pain (lytic lesions). M-spike on SPEP. Bence Jones proteinuria. Most common primary bone malignancy.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Coagulation Disorders — Hemostasis, DIC, Hemophilia <span class="page-ref">Ch.4 p.31</span></div>
+    <div class="note-body">
+      <p><strong>Primary hemostasis</strong>: platelet plug. Disorders → mucosal/skin bleeding (petechiae, purpura, ecchymoses). ↑ bleeding time, normal PT/PTT.</p>
+      <p><strong>ITP</strong>: IgG against platelets (GPIIb/IIIa) → splenic destruction. ↓ platelet count, ↑ megakaryocytes in bone marrow. Treat: steroids → IVIG → splenectomy.</p>
+      <p><strong>TTP</strong>: ↓ ADAMTS13 → large vWF multimers → platelet microthrombi. Pentad: thrombocytopenia, microangiopathic hemolytic anemia, fever, renal insufficiency (more in HUS), CNS symptoms (more in TTP). Treat: plasmapheresis.</p>
+      <p><strong>HUS</strong>: E. coli O157:H7 verotoxin damages endothelium; children. Schistocytes on smear.</p>
+      <p><strong>Secondary hemostasis</strong>: coagulation cascade → fibrin stabilization. Disorders → deep tissue/joint bleeding. ↑ PT/PTT.</p>
+      <p><strong>Hemophilia A</strong>: Factor VIII deficiency (X-linked). ↑ PTT, normal PT, normal bleeding time. Treat: recombinant FVIII.</p>
+      <p><strong>Hemophilia B (Christmas disease)</strong>: Factor IX deficiency. Same lab pattern.</p>
+      <p><strong>von Willebrand Disease</strong>: most common inherited coagulation disorder. ↑ bleeding time, ↑ PTT, abnormal ristocetin test. Treat: desmopressin (↑ vWF release from Weibel-Palade bodies).</p>
+      <p><strong>DIC</strong>: pathologic coagulation cascade activation → microthrombi + consumption of clotting factors + bleeding. ↓ platelets, ↑ PT/PTT, ↓ fibrinogen, ↑ D-dimer. Causes: obstetric complications, sepsis, adenocarcinoma, AML-M3, rattlesnake bite.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit-block" id="u6">
+  <div class="unit-header">Unit 6 · Cardiovascular System (Ch. 7 pp. 65–72, Ch. 8 pp. 73–84)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Atherosclerosis & Hypertension <span class="page-ref">Ch.7 p.65</span></div>
+    <div class="note-body">
+      <p><strong>Atherosclerosis</strong>: intimal plaque with necrotic lipid core + fibromuscular cap. Large/medium arteries (abdominal aorta, coronary, popliteal, internal carotid).</p>
+      <ul>
+        <li>Modifiable risk factors: HTN, hypercholesterolemia (↑ LDL, ↓ HDL), smoking, diabetes</li>
+        <li>Pathogenesis: endothelial damage → lipid entry → oxidation → foam cells → fibrosis + smooth muscle proliferation</li>
+        <li>Begins as fatty streaks (present in most teenagers); progresses to plaques</li>
+        <li>Complications: stenosis → angina/ischemia; plaque rupture + thrombosis → MI/stroke; embolism (cholesterol clefts); aneurysm (wall weakening)</li>
+      </ul>
+      <p><strong>Hypertension</strong>: ≥140/90 mmHg. 95% primary (essential); 5% secondary (renal artery stenosis → ↑ renin → ↑ AT II → vasoconstriction + aldosterone → Na/water retention).</p>
+      <ul>
+        <li>Malignant HTN (>180/120): acute end-organ damage; hyperplastic arteriolosclerosis ("onion-skin") → fibrinoid necrosis; emergency</li>
+        <li>Benign HTN: slow, silent damage; hyaline arteriolosclerosis → glomerular scarring (arteriolonephrosclerosis)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Angina & Myocardial Infarction <span class="page-ref">Ch.8 p.73</span></div>
+    <div class="note-body">
+      <p><strong>Stable angina</strong>: >70% coronary stenosis; chest pain with exertion, <20 min, ST depression. Reversible.</p>
+      <p><strong>Unstable angina</strong>: plaque rupture + incomplete occlusion; chest pain at rest; ST depression. High MI risk.</p>
+      <p><strong>Prinzmetal angina</strong>: vasospasm; ST elevation; relieved by Ca-channel blockers.</p>
+      <p><strong>Myocardial Infarction (MI)</strong>: plaque rupture + complete occlusion → necrosis. Severe, crushing pain >20 min; radiates to left arm/jaw; not relieved by nitroglycerin.</p>
+      <ul>
+        <li>LAD occlusion (45%): anterior wall + anterior septum infarction (most common)</li>
+        <li>RCA occlusion: posterior wall, posterior septum, papillary muscles</li>
+        <li><strong>Troponin I</strong>: gold standard; rises 2–4h, peaks 24h, returns 7–10 days</li>
+        <li><strong>CK-MB</strong>: useful for reinfarction (returns to normal by 72h)</li>
+        <li>Complications timeline: <4h = arrhythmia/cardiogenic shock; 1–3 days = fibrinous pericarditis, free wall rupture (tamponade), papillary muscle rupture (mitral regurgitation), VSD; 4–7 days = macrophage infiltration (soft, most vulnerable); months = aneurysm, mural thrombus, Dressler syndrome</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Heart Failure (Left- & Right-Sided) <span class="page-ref">Ch.8 p.76</span></div>
+    <div class="note-body">
+      <p><strong>Left-sided heart failure</strong>: causes = ischemia, HTN, MI, dilated cardiomyopathy.</p>
+      <ul>
+        <li>↓ forward perfusion + ↑ pulmonary congestion → pulmonary edema</li>
+        <li>Symptoms: dyspnea, orthopnea (↑ when lying flat), PND (paroxysmal nocturnal dyspnea), crackles, "heart failure cells" (hemosiderin-laden macrophages in alveoli)</li>
+        <li>↓ renal perfusion → ↑ renin-angiotensin → fluid retention (worsens CHF)</li>
+        <li>Treatment: ACE inhibitor (cornerstone)</li>
+      </ul>
+      <p><strong>Right-sided heart failure</strong>: most often secondary to left-sided failure; also cor pulmonale (chronic lung disease), left-to-right shunts.</p>
+      <ul>
+        <li>Symptoms: JVD, painful hepatosplenomegaly ("nutmeg liver" → cardiac cirrhosis), dependent pitting edema</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Valvular Disease & Shock <span class="page-ref">Ch.8 p.73</span></div>
+    <div class="note-body">
+      <p><strong>Valvular diseases</strong> covered in Pathoma within cardiac chapter. Key types:</p>
+      <ul>
+        <li>Mitral stenosis: most common cause = rheumatic heart disease; LA dilation; dyspnea, hemoptysis, atrial fibrillation</li>
+        <li>Mitral regurgitation: LV volume overload; holosystolic murmur at apex</li>
+        <li>Aortic stenosis: most common valvular disease; calcification (elderly) or bicuspid aortic valve (younger). Angina, syncope, heart failure = BAD prognosis without surgery</li>
+        <li>Aortic regurgitation: wide pulse pressure; "water-hammer" pulse; bounding carotid pulsations (de Musset sign)</li>
+      </ul>
+      <p><strong>Shock</strong>: generalized hypoperfusion → cell injury and death.</p>
+      <ul>
+        <li><strong>Cardiogenic</strong>: pump failure (MI, arrhythmia). ↓ CO, ↑ SVR, wet/cold</li>
+        <li><strong>Hypovolemic</strong>: blood/fluid loss. ↓ preload → ↓ CO, ↑ SVR</li>
+        <li><strong>Distributive (septic/anaphylactic)</strong>: ↓ SVR. Septic = endotoxin; Anaphylactic = IgE-mast cell → massive histamine + LT release</li>
+        <li>End-organ effects: ATN (kidneys), "nutmeg" liver, ARDS (lungs), stress ulcers (GI)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit-block" id="u7">
+  <div class="unit-header">Unit 7 · Respiratory System (Ch. 9, pp. 85–98)</div>
+  <div class="topic-section">
+    <div class="topic-title">Pneumonia — Lobar, Bronchopneumonia, Atypical <span class="page-ref">Ch.9 p.85</span></div>
+    <div class="note-body">
+      <p>Infection of lung parenchyma; impaired defenses or virulent organism.</p>
+      <p><strong>Lobar pneumonia</strong>: consolidation of entire lobe; S. pneumoniae (95%), Klebsiella (alcoholics/elderly, "currant jelly" sputum). Phases: congestion → red hepatization → gray hepatization → resolution.</p>
+      <p><strong>Bronchopneumonia</strong>: patchy consolidation around bronchioles; often bilateral; S. aureus, H. influenzae, Pseudomonas (cystic fibrosis), Moraxella, Legionella.</p>
+      <p><strong>Atypical (interstitial) pneumonia</strong>: diffuse interstitial infiltrates; mild presentation ("walking pneumonia").</p>
+      <ul>
+        <li>Mycoplasma (most common): young adults; cold agglutinins (autoimmune hemolytic anemia); NOT visible on gram stain (no cell wall)</li>
+        <li>RSV: most common in infants</li>
+        <li>Influenza: elderly/immunocompromised; risk of S. aureus superinfection</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Tuberculosis (TB) <span class="page-ref">Ch.9 p.89</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Primary TB</strong>: initial exposure → caseating necrosis in lower lobe + hilar lymph nodes → Ghon complex (calcified) → asymptomatic but positive PPD</li>
+        <li><strong>Secondary (reactivation) TB</strong>: at apex (high O₂, poor lymphatics). Cavitary caseous necrosis. Seen with AIDS, aging.</li>
+        <li>Symptoms: fever, night sweats, weight loss, hemoptysis, productive cough</li>
+        <li>AFB stain (acid-fast bacilli); caseating granulomas on biopsy</li>
+        <li>Systemic spread: meninges, cervical lymph nodes, kidneys (sterile pyuria), vertebrae (Pott disease)</li>
+        <li>Miliary TB: hematogenous spread → millet seed-like lesions throughout lungs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Asthma & COPD <span class="page-ref">Ch.9 p.89</span></div>
+    <div class="note-body">
+      <p><strong>Asthma</strong>: reversible airway obstruction. TH2-mediated (IL-4, IL-5); mast cell degranulation → bronchospasm (LTC4/D4), mucus, inflammation. Eosinophils prominent. ↓ FEV1:FVC ratio; responds to bronchodilators.</p>
+      <p><strong>COPD</strong>: irreversible airway obstruction. ↓↓ FEV1, ↓ FEV1:FVC. ↑ TLC (air trapping).</p>
+      <ul>
+        <li><strong>Chronic bronchitis</strong>: productive cough ≥3 months/year for ≥2 years. Hypertrophied mucous glands (Reid index >50%). "Blue bloater": ↑ PaCO₂, ↓ PaO₂, cyanosis, cor pulmonale</li>
+        <li><strong>Emphysema</strong>: destruction of alveolar air sacs → ↓ elastic recoil. Protease/antiprotease imbalance. Smoking → centriacinar (upper lobes). A1AT deficiency → panacinar (lower lobes), also cirrhosis. "Pink puffer": ↑ WOB, barrel chest, pursed lips, dyspnea</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Pulmonary Embolism & ARDS <span class="page-ref">Ch.9 p.92</span></div>
+    <div class="note-body">
+      <p><strong>Pulmonary Embolism</strong>: usually thromboembolus from DVT (femoral, iliac, popliteal veins). Most silent (dual blood supply). Infarction if large/moderate vessel + preexisting compromise.</p>
+      <ul>
+        <li>Symptoms: dyspnea, hemoptysis, pleuritic chest pain, pleural effusion</li>
+        <li>Saddle embolus → sudden death (electromechanical dissociation)</li>
+        <li>Diagnosis: ↑ D-dimer; spiral CT (vascular filling defect); V/Q mismatch on lung scan</li>
+        <li>Virchow triad: stasis, endothelial damage, hypercoagulability</li>
+      </ul>
+      <p><strong>ARDS</strong>: diffuse alveolar damage (DAD); protein-rich exudate + necrotic pneumocytes → hyaline membranes.</p>
+      <ul>
+        <li>Causes: sepsis, infection, shock, trauma, aspiration, pancreatitis, DIC, hypersensitivity, drugs</li>
+        <li>Neutrophil-mediated protease + free radical damage to type I and II pneumocytes</li>
+        <li>Clinical: hypoxemia, cyanosis, "white-out" on CXR</li>
+        <li>Treatment: PEEP ventilation + treat underlying cause. May resolve or → interstitial fibrosis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Lung Cancer <span class="page-ref">Ch.9 p.95</span></div>
+    <div class="note-body">
+      <p>Leading cause of cancer mortality. 85% in smokers. Also: radon (#2 cause), asbestos.</p>
+      <ul>
+        <li><strong>Small cell carcinoma</strong> (15%): central; neuroendocrine (chromogranin+); paraneoplastic syndromes (SIADH → hyponatremia; ACTH → Cushing; Lambert-Eaton myasthenic syndrome). NOT surgically resected; chemo/radiation.</li>
+        <li><strong>Adenocarcinoma</strong> (50% of NSCLC): peripheral; most common in nonsmokers and female smokers; TTF-1+; gland formation. Can present as pneumonia-like consolidation (adenocarcinoma in-situ).</li>
+        <li><strong>Squamous cell carcinoma</strong>: central; male smokers; keratin pearls; may produce PTHrP → hypercalcemia.</li>
+        <li><strong>Large cell carcinoma</strong>: diagnosis of exclusion; central or peripheral.</li>
+        <li>Pancoast tumor (apical): Horner syndrome (ptosis, miosis, anhidrosis) + brachial plexopathy (hand weakness)</li>
+        <li>SVC syndrome: ↑ head/neck venous distension with edema, blue discoloration of face</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 8 -->
+<div class="unit-block" id="u8">
+  <div class="unit-header">Unit 8 · Renal and Urinary System (Ch. 12, pp. 125–136)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">UTIs & Pyelonephritis <span class="page-ref">Ch.12 p.131</span></div>
+    <div class="note-body">
+      <p><strong>Cystitis</strong>: E. coli (80%). Dysuria, frequency, urgency, suprapubic pain; no fever. UA: pyuria, positive leukocyte esterase/nitrites. Culture >100,000 CFU = gold standard.</p>
+      <p><strong>Pyelonephritis</strong>: ascending infection; ↑ risk with vesicoureteral reflux. Fever, flank pain, CVA tenderness, WBC casts, leukocytosis + cystitis symptoms. E. coli (90%).</p>
+      <p><strong>Chronic pyelonephritis</strong>: interstitial fibrosis; cortical scarring; thyroidization of kidney (tubules filled with proteinaceous material). Due to vesicoureteral reflux or obstruction.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Nephrotic vs. Nephritic Syndrome & Glomerular Disorders <span class="page-ref">Ch.12 p.125</span></div>
+    <div class="note-body">
+      <p><strong>Nephrotic syndrome</strong>: >3.5g/day proteinuria, hypoalbuminemia, edema, hyperlipidemia, lipiduria. Basement membrane disruption.</p>
+      <ul>
+        <li>Minimal change disease (children): normal on H&E; EM shows foot process effacement; NO immune deposits; responds to steroids</li>
+        <li>FSGS: Hispanics/African Americans; HIV, heroin, sickle cell; focal/segmental sclerosis; poor steroid response</li>
+        <li>Membranous nephropathy: Caucasian adults; "spike and dome" on EM; subepithelial deposits; HBV/HCV, SLE, NSAIDs; poor steroid response</li>
+        <li>Diabetic nephropathy: Kimmelstiel-Wilson nodules; hyperfiltration injury → microalbuminuria → nephrotic</li>
+      </ul>
+      <p><strong>Nephritic syndrome</strong>: <3.5g/day proteinuria, oliguria, azotemia, hematuria (RBC casts), hypertension, periorbital edema. Glomerular inflammation.</p>
+      <ul>
+        <li>Poststreptococcal GN: 2–3 weeks after Group A Strep skin/throat infection; children; cola-colored urine; subepithelial "humps" on EM; self-limited</li>
+        <li>IgA nephropathy (Berger disease): most common worldwide nephropathy; episodic hematuria with mucosal infections; IgA mesangial deposits</li>
+        <li>Rapidly progressive GN (RPGN): crescents in Bowman space; progresses to renal failure in weeks. Types: Goodpasture (linear IF, anti-GBM Ab, hematuria + hemoptysis), immune complex (granular IF), pauci-immune (ANCA-associated: Wegener's c-ANCA; microscopic polyangiitis p-ANCA)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Nephrolithiasis (Kidney Stones) <span class="page-ref">Ch.12 p.132</span></div>
+    <div class="note-body">
+      <ul>
+        <li><strong>Calcium oxalate/phosphate</strong> (80%): hypercalciuria, hypercalcemia, hyperparathyroidism; radiopaque</li>
+        <li><strong>Struvite (magnesium ammonium phosphate)</strong>: urease-producing bacteria (Proteus, Klebsiella); staghorn calculi; radiopaque</li>
+        <li><strong>Uric acid</strong>: gout, Lesch-Nyhan; radiolucent; alkalinize urine to treat</li>
+        <li><strong>Cystine</strong>: cystinuria (autosomal recessive); radiolucent; hexagonal crystals</li>
+        <li>Symptoms: colicky flank pain radiating to groin, hematuria, nausea</li>
+      </ul>
+    </div>
+  </div>
+  <div class="topic-section">
+    <div class="topic-title">Acute Kidney Injury (AKI) & Chronic Kidney Disease (CKD) <span class="page-ref">Ch.12 p.125</span></div>
+    <div class="note-body">
+      <p><strong>AKI</strong>: rapid ↓ GFR. ↑ BUN/Cr, oliguria or anuria.</p>
+      <ul>
+        <li><strong>Prerenal</strong>: ↓ renal perfusion (dehydration, heart failure, shock). BUN:Cr >20:1, ↑ urine osmolality, ↓ FENa. Respond to fluids.</li>
+        <li><strong>Intrinsic (ATN)</strong>: acute tubular necrosis from ischemia (most common) or nephrotoxins (aminoglycosides, contrast, myoglobin). Granular "muddy brown" casts in urine. BUN:Cr ~10–15:1. ↑ FENa.</li>
+        <li><strong>Postrenal</strong>: obstruction (BPH, stones, tumor). ↑ BUN:Cr, bilateral hydronephrosis.</li>
+      </ul>
+      <p><strong>CKD</strong>: gradual, irreversible ↓ GFR over months/years. Causes: DM (#1), HTN (#2), chronic GN, PCKD.</p>
+      <ul>
+        <li><strong>Uremia</strong> (GFR <15): uremic frost, pericarditis, encephalopathy, peripheral neuropathy, platelet dysfunction (↑ bleeding time)</li>
+        <li>Renal osteodystrophy: ↓ Ca, ↑ phosphate → ↑ PTH → bone resorption</li>
+        <li>Normocytic anemia (↓ EPO production)</li>
+        <li>Hyperkalemia, metabolic acidosis (↓ H⁺ excretion)</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit-block" id="u9">
+  <div class="unit-header">Unit 9 · GI and Hepatobiliary Systems (Ch. 10 pp. 99–114, Ch. 11 pp. 115–136)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">GERD, Barrett Esophagus & Peptic Ulcer Disease <span class="page-ref">Ch.10 p.102</span></div>
+    <div class="note-body">
+      <p><strong>GERD</strong>: ↓ LES tone → acid reflux. Risk: alcohol, tobacco, obesity, caffeine, hiatal hernia. Symptoms: heartburn, adult-onset asthma, cough, enamel damage. Late: stricture, Barrett.</p>
+      <p><strong>Barrett esophagus</strong>: squamous → columnar (goblet cells) metaplasia in lower esophagus. Seen in 10% of GERD. May → dysplasia → adenocarcinoma. Screen with endoscopy.</p>
+      <p><strong>Peptic Ulcer Disease (PUD)</strong>:</p>
+      <ul>
+        <li><strong>Gastric ulcer</strong>: H. pylori (most common); NSAIDs → ↓ PGE₂ → ↓ mucus/bicarbonate → acid erosion. Pain worsens with eating. ↑ risk of malignancy.</li>
+        <li><strong>Duodenal ulcer</strong>: more common; H. pylori → ↑ acid. Pain improves with eating (food buffers acid). NOT associated with malignancy.</li>
+        <li>Complications: hemorrhage (erosion of gastroduodenal artery), perforation (peritonitis), obstruction</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Inflammatory Bowel Disease — Crohn's vs. Ulcerative Colitis <span class="page-ref">Ch.10 p.99</span></div>
+    <div class="note-body">
+      <table style="width:100%; font-size:0.82rem; border-collapse:collapse;">
+        <tr style="background:#7b1c1c; color:white;"><th style="padding:5px; text-align:left;">Feature</th><th style="padding:5px;">Crohn's</th><th style="padding:5px;">Ulcerative Colitis</th></tr>
+        <tr style="background:#fff8f0;"><td style="padding:5px;"><strong>Location</strong></td><td style="padding:5px;">Mouth to anus (any segment); terminal ileum most common</td><td style="padding:5px;">Colon only; starts at rectum, extends proximally; continuous</td></tr>
+        <tr><td style="padding:5px;"><strong>Pattern</strong></td><td style="padding:5px;">Skip lesions; cobblestone mucosa; transmural</td><td style="padding:5px;">Continuous; pseudopolyps; mucosal/submucosal only</td></tr>
+        <tr style="background:#fff8f0;"><td style="padding:5px;"><strong>Histology</strong></td><td style="padding:5px;">Noncaseating granulomas</td><td style="padding:5px;">Crypt abscesses</td></tr>
+        <tr><td style="padding:5px;"><strong>Complications</strong></td><td style="padding:5px;">Fistulas, strictures, malabsorption, B12/fat-soluble vitamin deficiency</td><td style="padding:5px;">↑ colorectal cancer risk, toxic megacolon, PSC (primary sclerosing cholangitis)</td></tr>
+        <tr style="background:#fff8f0;"><td style="padding:5px;"><strong>Symptoms</strong></td><td style="padding:5px;">RLQ pain, diarrhea (non-bloody or bloody)</td><td style="padding:5px;">Bloody diarrhea, tenesmus</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Viral Hepatitis & Cirrhosis <span class="page-ref">Ch.11 p.118</span></div>
+    <div class="note-body">
+      <p><strong>Hepatitis A</strong>: fecal-oral; RNA picornavirus; acute, self-limited; no chronic form; anti-HAV IgM = acute.</p>
+      <p><strong>Hepatitis B</strong>: blood/sexual/perinatal; DNA virus. HBsAg = infection; HBeAg = active replication/high infectivity; anti-HBs = recovery/immunity. Leads to chronic hepatitis, cirrhosis, HCC. Coinfection with HDV (requires HBV). Associated with polyarteritis nodosa.</p>
+      <p><strong>Hepatitis C</strong>: blood-borne RNA virus; #1 cause of chronic liver disease and liver transplant in US. Most develop chronicity → cirrhosis → HCC. Associated with membranoproliferative GN, cryoglobulinemia.</p>
+      <p><strong>Cirrhosis</strong>: irreversible fibrosis replacing normal hepatic parenchyma. Causes: alcohol (#1 in US), HCV, HBV, NASH, Wilson disease, hemochromatosis, primary biliary cirrhosis.</p>
+      <ul>
+        <li><strong>Portal hypertension</strong>: splenomegaly (hypersplenism → thrombocytopenia), esophageal varices (rupture = most common cause of death in cirrhosis), caput medusae, hemorrhoids</li>
+        <li><strong>Hepatic failure</strong>: ↓ clotting factors (↑ PT), ↓ albumin (ascites, peripheral edema), jaundice, gynecomastia, spider angiomas, palmar erythema</li>
+        <li><strong>Hepatic encephalopathy</strong>: ↑ ammonia → asterixis (flapping tremor), altered LOC. Treat: lactulose, rifaximin</li>
+        <li><strong>Hepatorenal syndrome</strong>: renal failure from splanchnic vasodilation in cirrhosis</li>
+        <li>SBP (spontaneous bacterial peritonitis): E. coli most common</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Cholecystitis, Gallstones & Pancreatitis <span class="page-ref">Ch.11 p.115</span></div>
+    <div class="note-body">
+      <p><strong>Gallstones (Cholelithiasis)</strong>:</p>
+      <ul>
+        <li>Cholesterol stones (90%): radiolucent; "4 Fs" — Fat, Fertile (multiparous), Female, Forty; also clofibrate, Crohn disease, cirrhosis</li>
+        <li>Bilirubin/pigment stones: hemolysis (↑ UCB in bile) or biliary infection</li>
+        <li>Usually asymptomatic; complications: biliary colic, cholecystitis, ascending cholangitis, gallstone ileus</li>
+      </ul>
+      <p><strong>Acute cholecystitis</strong>: stone in cystic duct → ischemia + bacterial overgrowth (E. coli). RUQ pain radiating to right scapula (Murphy's sign), fever, ↑ WBC, ↑ alkaline phosphatase. Risk of rupture → peritonitis.</p>
+      <p><strong>Acute pancreatitis</strong>: premature trypsin activation → autodigestion. Causes: alcohol + gallstones (most common); also hypercalcemia, hypertriglyceridemia, trauma, drugs, scorpion sting.</p>
+      <ul>
+        <li>Epigastric pain radiating to back, N/V; ↑ lipase (more specific) + amylase; hypocalcemia (saponification); Grey Turner (flank) / Cullen (periumbilical) signs = retroperitoneal hemorrhage</li>
+        <li>Complications: shock, pseudocyst (persistently ↑ amylase), abscess, DIC, ARDS</li>
+      </ul>
+      <p><strong>Chronic pancreatitis</strong>: fibrosis. Causes: alcohol (#1 adults), CF (children). Features: epigastric pain, steatorrhea (↓ lipase), fat-soluble vitamin deficiency, calcifications on imaging ("chain of lakes"), secondary DM, ↑ risk for pancreatic cancer.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit-block" id="u10">
+  <div class="unit-header">Unit 10 · Endocrine System (Ch. 15, pp. 159–174)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Diabetes Mellitus — Types 1 & 2, DKA, HHS <span class="page-ref">Ch.15 p.159</span></div>
+    <div class="note-body">
+      <p><strong>Type 1 DM</strong>: autoimmune destruction of beta cells → absolute insulin deficiency. HLA-DR3/DR4 associated. Prone to DKA.</p>
+      <p><strong>Type 2 DM</strong>: insulin resistance + relative insulin deficiency. Associated with obesity. Amylin deposits in islets. Prone to HHS.</p>
+      <p><strong>Chronic complications</strong>: non-enzymatic glycosylation of proteins → basement membrane thickening → microangiopathy. Retinopathy (leading cause of new blindness), nephropathy (Kimmelstiel-Wilson nodules → nephrotic syndrome → CKD), neuropathy, macrovascular disease (↑ MI, stroke, PVD). Hyaline arteriolosclerosis of efferent arteriole → hyperfiltration.</p>
+      <p><strong>DKA</strong> (Type 1): absolute insulin deficiency → ↑ glucagon → lipolysis → ketone bodies → anion gap metabolic acidosis. Kussmaul breathing, fruity breath, N/V. ↑ glucose, ↓ bicarbonate, ↑ anion gap, ketonuria. Treat: insulin + IV fluids + K⁺ replacement.</p>
+      <p><strong>HHS</strong> (Type 2): ↑↑ glucose (often >600) with NO ketosis (residual insulin suppresses lipolysis). Severe dehydration, altered mental status. ↑ serum osmolality. Treat: aggressive IV fluids + insulin.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Thyroid Disorders — Graves', Hashimoto's, Thyroid Cancer <span class="page-ref">Ch.15 p.161</span></div>
+    <div class="note-body">
+      <p><strong>Hyperthyroidism features</strong>: weight loss despite ↑ appetite, heat intolerance, tachycardia, tremor, diarrhea, oligomenorrhea, exophthalmos, ↑ BMR.</p>
+      <p><strong>Graves disease</strong>: most common hyperthyroidism. TSH receptor-stimulating IgG Ab (Type II HSR). Diffuse goiter + exophthalmos + pretibial myxedema. ↑ T4, ↓ TSH. Treat: β-blockers + thioamide (PTU/methimazole) + radioiodine ablation. Thyroid storm emergency: PTU + β-blocker + steroids.</p>
+      <p><strong>Hypothyroidism features</strong>: weight gain, cold intolerance, bradycardia, constipation, myxedema (glycosaminoglycans in skin), mental slowing, ↑ cholesterol.</p>
+      <p><strong>Hashimoto thyroiditis</strong>: most common cause of hypothyroidism in iodine-sufficient areas. Autoimmune; anti-thyroid peroxidase (anti-TPO) and anti-thyroglobulin Abs. Lymphocytic infiltrate + germinal centers on biopsy. Hurthle cell metaplasia. ↑ risk for B-cell (marginal zone) lymphoma and papillary thyroid carcinoma.</p>
+      <p><strong>Thyroid cancers</strong>: Papillary (most common; "Orphan Annie" nuclei, psammoma bodies; RET/BRAF mutations; excellent prognosis); Follicular (hematogenous spread; vascular invasion); Medullary (from C cells; secretes calcitonin; amyloid stroma; associated with MEN 2A/2B); Anaplastic (most aggressive; elderly; worst prognosis).</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Adrenal Gland — Cushing's, Addison's, Pheochromocytoma <span class="page-ref">Ch.15 p.159</span></div>
+    <div class="note-body">
+      <p><strong>Cushing syndrome</strong>: excess cortisol. Causes: exogenous steroids (#1), pituitary ACTH adenoma (Cushing disease), ectopic ACTH (small cell lung CA), adrenal adenoma/carcinoma. Features: central obesity, moon face, buffalo hump, purple striae, muscle weakness, osteoporosis, HTN, hyperglycemia, immunosuppression. Diagnosis: 24h urine cortisol, dexamethasone suppression test.</p>
+      <p><strong>Addison disease</strong>: primary adrenal insufficiency. Causes: autoimmune (most common in developed world, anti-21-hydroxylase Ab), TB (most common worldwide), metastasis. Features: hypotension, hyponatremia, hyperkalemia (↓ aldosterone), hypoglycemia (↓ cortisol), hyperpigmentation (↑ ACTH/MSH), weakness, weight loss. Crisis precipitated by stress. Treat: hydrocortisone + fludrocortisone.</p>
+      <p><strong>Conn syndrome (primary hyperaldosteronism)</strong>: ↑ aldosterone (adrenal adenoma most common). HTN + hypokalemia + metabolic alkalosis + suppressed renin. Treat: surgery or spironolactone.</p>
+      <p><strong>Pheochromocytoma</strong>: catecholamine-secreting tumor of chromaffin cells (adrenal medulla). "Rule of 10s": 10% bilateral, 10% malignant, 10% extra-adrenal, 10% in children. Associated with MEN 2A/2B, VHL, NF1. Episodic HTN + headache + diaphoresis + palpitations. ↑ urine metanephrines/VMA. Treat: alpha-blockade first (phenoxybenzamine), then beta-blocker, then surgery.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit-block" id="u11">
+  <div class="unit-header">Unit 11 · Neurological System (Ch. 17, pp. 181–194)</div>
+
+div>
+
+  <div class="topic-section">
+    <div class="topic-title">Stroke (CVA) — Ischemic & Hemorrhagic, TIA <span class="page-ref">Ch.17 p.181</span></div>
+    <div class="note-body">
+      <p><strong>Ischemic stroke</strong>: most common (80%). Thrombotic (atherosclerosis, lacunar), embolic (cardiac — afib, valve), or hypoperfusion.</p>
+      <ul>
+        <li>Liquefactive necrosis of brain (microglial enzymes)</li>
+        <li>MCA territory (most common): contralateral hemiplegia/hemisensory loss, aphasia (dominant hemisphere), hemineglect (non-dominant)</li>
+        <li>Watershed infarct: borderzone between MCA/ACA → proximal arm/leg weakness ("man in a barrel")</li>
+        <li>Treat: tPA within 4.5 hours (ischemic only); antiplatelet therapy</li>
+      </ul>
+      <p><strong>Hemorrhagic stroke</strong>:</p>
+      <ul>
+        <li>Epidural hematoma: middle meningeal artery rupture (temporal bone fracture); "lucid interval" then rapid deterioration; biconvex lens-shaped on CT</li>
+        <li>Subdural hematoma: bridging vein rupture; elderly/alcoholics; crescent-shaped on CT</li>
+        <li>Subarachnoid hemorrhage: berry aneurysm rupture; "worst headache of my life"; blood in CSF</li>
+        <li>Intracerebral: hypertensive — putamen/basal ganglia most common (lenticulostriate arteries); treat HTN</li>
+      </ul>
+      <p><strong>TIA</strong>: transient (<24h, usually <1h) neurologic deficit from focal ischemia; no infarction on imaging; harbinger of ischemic stroke.</p>
+      <p><strong>Increased ICP</strong>: HTN + bradycardia + irregular respirations (Cushing triad). Herniation: uncal (CN III palsy → blown pupil + ipsilateral Babinski), transtentorial, tonsillar (respiratory arrest). Treat: elevate head, hyperventilate (↓ PaCO₂ → vasoconstriction → ↓ ICP), mannitol (osmotic diuresis), burr hole.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Alzheimer's, Parkinson's & Multiple Sclerosis <span class="page-ref">Ch.17 p.181</span></div>
+    <div class="note-body">
+      <p><strong>Alzheimer disease</strong>: most common cause of dementia. Beta-amyloid plaques (Aβ from APP on chromosome 21) + neurofibrillary tangles (tau protein). ApoE4 allele → ↑ risk. Down syndrome (trisomy 21) → early onset Alzheimer by age 40. Progressive memory loss, aphasia, apraxia, personality changes.</p>
+      <p><strong>Parkinson disease</strong>: dopamine depletion in substantia nigra; Lewy bodies (α-synuclein inclusions). Features: bradykinesia, "pill-rolling" resting tremor, cogwheel rigidity, festinating gait, expressionless face, small handwriting (micrographia). Treat: levodopa/carbidopa, dopamine agonists.</p>
+      <p><strong>Multiple sclerosis</strong>: demyelinating disease; CD4⁺ T-cell mediated destruction of oligodendrocytes (myelin-producing cells). Young white females; relapsing-remitting pattern. Symptoms: optic neuritis (vision loss), internuclear ophthalmoplegia (MLF lesion → failure of adduction), Lhermitte sign (neck flexion → "electric shock"), bladder dysfunction, weakness, sensory changes. White matter plaques (periventricular) on MRI. CSF: oligoclonal IgG bands, ↑ MBP. Treat: steroids for flares; interferon-β, natalizumab for RRMS.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit-block" id="u12">
+  <div class="unit-header">Unit 12 · Musculoskeletal & Integumentary Systems (Ch. 18 pp. 195–204, Ch. 19 pp. 205–212)</div>
+
+  <div class="topic-section">
+    <div class="topic-title">Bone Disorders — Osteoporosis & Osteomyelitis <span class="page-ref">Ch.18 p.195</span></div>
+    <div class="note-body">
+      <p><strong>Osteoporosis</strong>: ↓ bone mass; normal bone composition. Most common metabolic bone disease.</p>
+      <ul>
+        <li>Risk factors: postmenopausal estrogen loss (#1 in females), aging, corticosteroids, immobilization, calcium/Vit D deficiency, smoking, alcohol</li>
+        <li>Normal Ca, PO₄, PTH, alkaline phosphatase (distinguishes from osteomalacia)</li>
+        <li>Clinical: vertebral compression fractures (kyphosis, ↓ height), hip fractures (distal radius), DEXA scan for diagnosis</li>
+        <li>Treatment: weight-bearing exercise, Ca/Vit D, bisphosphonates (↑ osteoclast apoptosis), estrogen replacement (debated)</li>
+      </ul>
+      <p><strong>Osteomyelitis</strong>: bone/marrow infection. Usually hematogenous; children (metaphysis) or adults (epiphysis).</p>
+      <ul>
+        <li>S. aureus (90% of all cases); N. gonorrhoeae (sexually active); Salmonella (sickle cell — classic); Pseudomonas (diabetics, IV drug users); TB → Pott disease (vertebral)</li>
+        <li>Bone pain + fever + leukocytosis; lytic focus (sequestrum) + sclerosis (involucrum) on x-ray</li>
+        <li>Diagnosis: blood culture</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Joint Disorders — Osteoarthritis, RA, Gout <span class="page-ref">Ch.18 p.200</span></div>
+    <div class="note-body">
+      <p><strong>Osteoarthritis (OA)</strong>: most common arthritis; "wear and tear." Risk: age >60, obesity, trauma. Oligoarticular (hips, knees, lumbar spine, DIP/PIP). Morning stiffness that WORSENS during day. Heberden nodes (DIP), Bouchard nodes (PIP). Normal labs. Cartilage loss + osteophytes on x-ray.</p>
+      <p><strong>Rheumatoid Arthritis (RA)</strong>: chronic, systemic autoimmune (see also Unit 2). HLA-DR4. Symmetric PIP, wrist, elbow, ankle, knee. DIP SPARED. Morning stiffness IMPROVES with activity. Pannus formation → cartilage destruction. Rheumatoid factor (anti-IgG); anti-CCP (more specific). ↑ ESR, CRP, anemia of chronic disease. Extra-articular: rheumatoid nodules (necrosis with histiocytes), vasculitis, Baker cyst, interstitial fibrosis, pleural effusions.</p>
+      <p><strong>Gout</strong>: monosodium urate crystals (negatively birefringent, needle-shaped) deposit in joints. ↑ uric acid (↓ excretion most common, or ↑ production — Lesch-Nyhan, myeloproliferative disease). Acute: 1st MTP joint (podagra), hot/swollen/erythematous. Chronic: tophi formation. Treat acute: NSAIDs/colchicine/steroids. Chronic: allopurinol (↓ xanthine oxidase) or probenecid (↑ excretion).</p>
+      <p><strong>Pseudogout</strong>: calcium pyrophosphate crystals (positively birefringent, rhomboid-shaped); often knee; associated with aging, hyperparathyroidism, hemochromatosis.</p>
+    </div>
+  </div>
+
+  <div class="topic-section">
+    <div class="topic-title">Skin — Psoriasis, Melanoma, Basal & Squamous Cell Carcinoma <span class="page-ref">Ch.19 p.205</span></div>
+    <div class="note-body">
+      <p><strong>Psoriasis</strong>: chronic inflammatory skin disease; T-cell mediated. ↑ keratinocyte proliferation. Salmon-colored plaques with silvery scale on extensor surfaces (elbows, knees), scalp. "Auspitz sign" (pinpoint bleeding when scale removed). Nail pitting, onycholysis. Treat: topical corticosteroids, Vit D analogs, biologics (anti-TNF), PUVA.</p>
+      <p><strong>Melanoma</strong>: malignant proliferation of melanocytes. Risk: UVB exposure, family history, fair skin, dysplastic nevus syndrome, CDKN2A/BRAF mutations. ABCDE criteria: Asymmetry, Border irregularity, Color variation, Diameter >6mm, Evolution. Breslow thickness = most important prognostic factor. Treat: wide excision; sentinel lymph node biopsy; BRAF inhibitors (vemurafenib) for BRAF V600E mutation.</p>
+      <p><strong>Basal Cell Carcinoma (BCC)</strong>: most common cutaneous malignancy. UVB; upper lip; "pearl-like" papule with central ulceration and telangiectasias. Peripheral palisading on histology. Metastasis RARE. Treat: surgical excision.</p>
+      <p><strong>Squamous Cell Carcinoma (SCC)</strong>: malignant squamous cells with keratin pearls. Risk: UVB, arsenic, immunosuppression, chronic inflammation. Usually lower lip, face. Metastasis uncommon but higher than BCC. Precursor: actinic keratosis (hyperkeratotic scaly plaque). Treat: excision.</p>
+      <div class="gap-note">⚠ Burn pathophysiology is not covered in Pathoma. Supplement with ATI, Brunner & Suddarth, or course lecture notes for burn classification (superficial, partial, full thickness), Parkland formula, escharotomy, inhalation injury, and infection risk.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Notes extracted from <em>Fundamentals of Pathology</em> — Husain A. Sattar, MD · 2021 Edition · pathoma.com<br>
+  For nursing school use. These are study notes — always cross-reference with your course lectures and assigned readings.
+</footer>
+
+</body>
+</html>
+HTMLEOF
+echo "Done — file size: $(wc -c < /mnt/user-data/outputs/pathoma_detailed_notes.html) bytes” 
